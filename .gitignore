@@ -1,0 +1,52 @@
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Output of the go coverage tool
+*.cover
+*.coverprofile
+*.cov
+*.coverage
+*.cov.out
+
+# Dependency directories (remove the comment below if you use Go modules)
+# /vendor/
+
+# Go workspace file
+go.work
+go.work.sum
+
+# Go build directory
+bin/
+
+# Logs and database files
+*.log
+*.sql
+*.sqlite
+
+# IDE and editor specific files
+.vscode/
+.idea/
+*.swp
+*~
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+*.sublime-project
+
+# Environment variable files
+.env
+
+# macOS specific files
+.DS_Store
+
+# Windows specific files
+Thumbs.db
