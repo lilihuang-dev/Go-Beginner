@@ -30,9 +30,13 @@ func LoginHandler(w http.ResponseWriter, r *http.Request) {
 	// Placeholder for credential validation
 	if creds.Username == "admin" && creds.Password == "password" {
 		// Generate JWT token (omitted for brevity)
-		// token := "fake-jwt-token"
+		token, err := GenerateJWT(creds.Username)
+		if err != nil {
+			w.WriteHeader(http.StatusInternalServerError)
+			return
+		}
 		w.WriteHeader(http.StatusOK)
-		w.Write([]byte("VALIDATION FROM LOGINHANDLER!!"))
+		w.Write([]byte(token))
 	} else {
 		w.WriteHeader(http.StatusUnauthorized)
 		w.Write([]byte("Invalid credentials"))
